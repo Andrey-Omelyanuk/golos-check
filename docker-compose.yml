@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  notebook:
+    image: jupyter/scipy-notebook 
+    ports:
+      - "127.0.0.1:8888:8888"
+    volumes:
+      - ./work:/home/jovyan/work
+    #   - ./config/jupyter-config.json:/home/jovyan/.jupyter/jupyter_notebook_config.json
+    #   - ./config:/home/jovyan/.jupyter/config
