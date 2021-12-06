@@ -52,6 +52,11 @@ for code in stations_code:
     }
     stations[code] = {**by_station, **x}
 
+for station in pollingStations:
+    code = station['code']
+    if code in stations_code:
+        stations[code] = {**stations[code], **station}
+
 
 # TODO: download photos
 
